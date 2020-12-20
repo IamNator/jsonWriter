@@ -1,4 +1,4 @@
-package jsonWrite
+package jsWrite
 
 import (
 	//jsonWrite "github.com/IamNator/JsonWrite"

@@ -1,4 +1,4 @@
-package jsonWrite
+package jsWrite
 
 import (
 	"encoding/json"
