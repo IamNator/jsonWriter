@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestJsonResponse(t *testing.T) {
+func TestResponse(t *testing.T) {
 	req, err := http.NewRequest("GET", "/", nil)
 	if err != nil {
 		t.Fatal(err)
