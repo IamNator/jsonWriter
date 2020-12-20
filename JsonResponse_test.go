@@ -26,7 +26,7 @@ func TestJsonResponse(t *testing.T) {
 		t.Errorf("handler returned wrong status code: got %v want %v", status, http.StatusOK)
 	}
 
-	expected := "{\"error\":\"error\"}\n"
+	expected := `{title:"error", message:"error"}`
 	if rr.Body.String() != expected {
 		t.Errorf("handler returned unexpected body: got %v want %v", rr.Body.String(), expected)
 	}
