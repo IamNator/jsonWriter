@@ -5,8 +5,8 @@ import (
 	"net/http"
 )
 
-func JsonResponse(w http.ResponseWriter, Title string, Message string, ErrorCode int) {
-	(w).WriteHeader(ErrorCode)
+func JsonResponse(w http.ResponseWriter, Title string, Message string, StatusCode int) {
+	(w).WriteHeader(StatusCode)
 	json.NewEncoder(w).Encode(struct {
 		Title string  `json:"title"`
 		Message string `json:"message"`
