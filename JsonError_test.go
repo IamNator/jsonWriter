@@ -1,6 +1,8 @@
-package jsonWrite//_test
+package jsonWrite
 
 import (
+	//jsonWrite "github.com/IamNator/JsonWrite"
+
 	//"github.com/IamNator/mysql-golang-web/session"
 	"net/http"
 	"net/http/httptest"
@@ -23,9 +25,10 @@ func TestJsonError(t *testing.T) {
 	if status := rr.Code; status != http.StatusOK {
 		t.Errorf("handler returned wrong status code: got %v want %v", status, http.StatusOK)
 	}
-	expected := `{ error: "error" }`
+
+	expected := "{\"error\":\"error\"}\n"
 	if rr.Body.String() != expected {
-		t.Errorf("handler returned unexpected body: got %v want %v", rr.Body.String(), expected)
+		t.Errorf("handler returned unexpected body: got (%v) want (%v)", rr.Body.String(), expected)
 	}
 }
 //
