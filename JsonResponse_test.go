@@ -1,4 +1,4 @@
-package jsWrite
+package jsonWrite
 
 import (
 	"net/http"
@@ -15,7 +15,7 @@ func TestJsonResponse(t *testing.T) {
 	rr := httptest.NewRecorder()
 
 	handler := http.HandlerFunc(func (w http.ResponseWriter, _ * http.Request){
-		JsonResponse(w, "error", "error", http.StatusOK)
+		Response(w, "error", "error", http.StatusOK)
 	})
 	handler.ServeHTTP(rr, req)
 
