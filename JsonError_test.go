@@ -1,8 +1,12 @@
 package jsonWrite_test
 
-import "testing"
+import (
+	"net/http"
+	"testing"
+)
 
 func TestJsonError(t *testing.T) {
+	req, err := http.NewRequest("GET","/")
 
 }
 
