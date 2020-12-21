@@ -47,14 +47,30 @@ PASS
 ok      github.com/IamNator/JsonWrite   0.818s   
 
 
-
+### Examples
 ```
-Give an example
+package main
+
+import (
+	"github.com/IamNator/jsonWriter
+)
+
+    err := json.NewDecoder(req.Body).Decode(&user)
+    check(err)
+    
+	if user.Email == "" || user.PassWord == "" {
+		JsonError(w, "please Fill in fields", http.StatusBadRequest)
+		return
+	}
+    
+//This write the json {"error":"please Fill in Fields"} as a response.
+//For more documentation use "go doc -all " 
+
 ```
 
 ## Built With
 
-* [net/http and encoding/json ]() - go depencies used
+* [net/http and encoding/json ]() - go dependencies used
 * [go mod]() - Dependency Management
 
 
