@@ -16,7 +16,7 @@ func Errorf(w http.ResponseWriter, ErrorMessage string, ErrorCode int, error ...
 	w.WriteHeader(ErrorCode)
 	w.Header().Set("Content-Type", "application/json")
 
-	ErrorMessage = fmt.Sprintf(ErrorMessage, error)
+	ErrorMessage = fmt.Sprintf(ErrorMessage, error) //BUG(IamNator) error format not really cool
 	//contains := 0
 	for i,_ := range error {
 		if !strings.Contains(ErrorMessage, error[i].Error())/*if ErrorMessage does not contain error */ {
