@@ -1,4 +1,4 @@
-package jsonWrite
+package jsonWriter
 
 import (
 	"net/http"

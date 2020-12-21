@@ -1,4 +1,4 @@
-package jsonWrite
+package jsonWriter
 
 import (
 	"encoding/json"
@@ -23,4 +23,6 @@ func Response(w http.ResponseWriter, Title string, Message string, StatusCode in
 		w.Write([]byte("unable to encode json response"))
 	}
 }
+
+
 
