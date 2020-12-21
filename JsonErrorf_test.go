@@ -51,9 +51,9 @@ func TestErrorf2(t *testing.T) {
 
 	rr := httptest.NewRecorder()
 	var errs [3]error
-	errs[0] = errors.New("test error, ")
-	errs[1] = errors.New("test error 2, ")
-	errs[2] = errors.New("test error 3")
+	errs[0] = errors.New("test error ")
+	errs[1] = errors.New(",test error 2 ")
+	errs[2] = errors.New(",test error 3")
 
 	handler := http.HandlerFunc(func (w http.ResponseWriter, _ * http.Request){
 		Errorf(w, "error : %v", http.StatusOK, errs[0])
@@ -66,7 +66,7 @@ func TestErrorf2(t *testing.T) {
 		t.Logf("Status Code Test Passed : %v", status)
 	}
 
-	expected := `{"error":"error : [test error, ]"}
+	expected := `{"error":"error : [test error ]"}
 `
 	if rr.Body.String() != expected {
 		t.Errorf("handler returned unexpected body: got %v want %v", rr.Body.String(), expected)
