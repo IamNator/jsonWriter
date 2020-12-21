@@ -18,9 +18,10 @@ func Errorf(w http.ResponseWriter, ErrorMessage string, ErrorCode int, error ...
 
 	ErrorMessage = fmt.Sprintf(ErrorMessage, error) //BUG(IamNator) error format not really cool
 	//contains := 0
-	for i,_ := range error {
-		if !strings.Contains(ErrorMessage, error[i].Error())/*if ErrorMessage does not contain error */ {
-			ErrorMessage = fmt.Sprintf(ErrorMessage + " : %v ", error[i] )
+	for _,v := range error {
+		//if ErrorMessage does not contain error message
+		if !strings.Contains(ErrorMessage, v.Error()) {
+			ErrorMessage = fmt.Sprintf(ErrorMessage + " : %s ", v.Error() )
 		}
 	}
 
