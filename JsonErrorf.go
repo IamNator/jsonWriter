@@ -7,8 +7,10 @@ import (
 	"strings"
 )
 
-//Writes Error Message to ResponseWriter in json format
-// Errorf( ResponseWriter interface, custom error message, http.StatusCode, err error)
+//Writes ErrorMessage to ResponseWriter in json format
+//
+//Errorf( ResponseWriter interface, custom error message, http.StatusCode, err error)
+//
 //Example of json written is --> {"error": "(ErrorMessage : error)" }
 func Errorf(w http.ResponseWriter, ErrorMessage string, ErrorCode int, error ...error) {
 	w.WriteHeader(ErrorCode)
