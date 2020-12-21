@@ -8,8 +8,8 @@ import (
 )
 
 //Writes Error Message to ResponseWriter in json format
-//Similar Errorf( ResponseWriter interface, custom error message, http.StatusCode, err error)
-//Example of json written is --> {"error":ErrorMessage}
+// Errorf( ResponseWriter interface, custom error message, http.StatusCode, err error)
+//Example of json written is --> {"error": "(ErrorMessage : error)" }
 func Errorf(w http.ResponseWriter, ErrorMessage string, ErrorCode int, error ...error) {
 	w.WriteHeader(ErrorCode)
 	w.Header().Set("Content-Type", "application/json")
