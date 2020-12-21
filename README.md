@@ -8,7 +8,7 @@ Use the command "go get github.com/IamNator/jsonWriter" to download and setup th
 
 ### Prerequisites
 
-go 1.1 or greater, to check your go version type the following commmand in your terminal
+go 1.1 or greater, to check your go version, type the following commmand in your terminal
 
 ```
 go version
