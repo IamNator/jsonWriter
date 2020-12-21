@@ -8,29 +8,21 @@ Use the command "go get github.com/IamNator/jsonWriter" to download and setup th
 
 ### Prerequisites
 
-go 1.1 or greater 
+go 1.1 or greater, to check your go version type the following commmand in your terminal
 
 ```
-go get github.com/IamNator/jsonWriter
+go version
 ```
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+Use the "go get command"
 
 ```
-Give the example
+go get github.com/IamNator/jsonWriter
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
@@ -62,13 +54,13 @@ Give an example
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [net/http and encoding/json ]() - go depencies used
+* [go mod]() - Dependency Management
+
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://gist.github.com/IamNator/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
