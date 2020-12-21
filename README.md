@@ -63,7 +63,7 @@ import (
 		return
 	}
     
-//This write the json {"error":"please Fill in Fields"} as a response.
+//This writes the json {"error":"please Fill in Fields"} as a response.
 //For more documentation use "go doc -all " 
 
 ```
