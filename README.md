@@ -59,7 +59,7 @@ import (
     check(err)
     
 	if user.Email == "" || user.PassWord == "" {
-		JsonError(w, "please Fill in fields", http.StatusBadRequest)
+		jsonWriter.Error(w, "please Fill in fields", http.StatusBadRequest)
 		return
 	}
     
